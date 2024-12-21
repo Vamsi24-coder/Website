@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right,#ff9e44,#00e1ff, #069d3e);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Header Animation */
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: slideDown 1.5s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-title {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    height: 600px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Different Background Colors for Cards */
+.card:nth-child(1) {
+    background: linear-gradient(to bottom, #ffcc80, #ff8a65);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(to bottom, #80d8ff, #40c4ff);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(to bottom, #a5d6a7, #66bb6a);
+}
+
+.card:nth-child(1) a {
+    background: linear-gradient(to bottom, #ffcc80, #ff8a65);
+}
+
+.card:nth-child(2) a{
+    background: linear-gradient(to bottom, #80d8ff, #40c4ff);
+}
+
+.card:nth-child(3) a{
+    background: linear-gradient(to bottom, #a5d6a7, #66bb6a);
+}
+.card:nth-child(1) a:hover {
+    background: linear-gradient(to bottom, #ffcc80, #ff8a65);
+}
+
+.card:nth-child(2) a:hover{
+    background: linear-gradient(to bottom, #80d8ff, #40c4ff);
+}
+
+.card:nth-child(3) a:hover{
+    background: linear-gradient(to bottom, #a5d6a7, #66bb6a);
+}
+
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.card p {
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: #ffffffcc;
+}
+
+.card a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.card a:hover {
+    background: #ff9e44;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 20px;
+        height: 300px; /* Increased height for smaller screens */
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}
+/* Top Navigation Bar */
+.top-nav {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex; /* Align items in a row */
+    gap: 20px; /* Space between the items */
+    z-index: 1000; /* Keeps the navigation on top of all content */
+   
+}
+
+.nav-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #151515; /* Bright green on hover */
+    color: #d6730a;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        top: 5px;
+        left: 5px;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+
+  
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Grounds</title>
+    <link rel="stylesheet" href="Carrer.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Career Counsellor</h1>
+    </header>
+
+    <main>
+        <section class="branch-selection">
+            <h2>Select Your Branch</h2>
+            <select id="branchDropdown">
+                <option value="default" disabled selected>Select a Branch</option>
+                <option value="data-science">Data Science</option>
+                <option value="ece">ECE</option>
+                <option value="ai">Artificial Intelligence</option>
+            </select>
+            <button id="viewOpportunities">View Opportunities</button>
+        </section>
+    </main>
+    
+    <div class="top-nav">
+        <a href="Arena.html" class="nav-item"><span class="icon">🏠</span> Home</a>
+        <a href="about.html" class="nav-item"><span class="icon">ℹ️</span> About Us</a>
+        <a href="help.html" class="nav-item"><span class="icon">❓</span> Help</a>
+    </div>
+    <footer>
+        <p>Developed by Mad Techies | Follow Your Passion</p>
+    </footer>
+
+    <script>
+        document.getElementById('viewOpportunities').addEventListener('click', () => {
+            const selectedBranch = document.getElementById('branchDropdown').value;
+            if (selectedBranch !== 'default') {
+                window.location.href = 'opportunity.html';
+            } else {
+                alert('Please select a branch!');
+            }
+        });
+    </script>
+
+</body>
+</html>
