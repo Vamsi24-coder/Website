@@ -12,6 +12,23 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+header {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    top : 20px;
+    right : 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 
 
 /* Background Effect (Static) */
