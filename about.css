@@ -4,51 +4,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: #fff;
+    background: #f4f4f9; /* Neutral light background */
+    color: #333; /* Darker text for better readability */
     line-height: 1.6;
-    padding: 0 20px;
     overflow-x: hidden;
-    position: relative;
-    animation: gradientMove 15s ease infinite;
-}
-  
-@keyframes gradientMove {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
-}
-  
-/* Background Animated Effect */
-@keyframes movingBackground {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(100px, 100px);
-    }
 }
 
+
+/* Background Effect (Static) */
+/* Background Effect (Removed for a clean look) */
 .background-shapes {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1), rgba(255, 0, 150, 0.1));
-    animation: movingBackground 10s infinite alternate;
-    z-index: -1;
+    display: none; /* Hides the background shapes */
 }
-  
+
+
 h1, h2 {
     text-align: center;
     color: #2575fc;
@@ -56,48 +28,10 @@ h1, h2 {
     margin-bottom: 30px;
     font-weight: bold;
     position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.5s ease;
 }
-  
+
 h1:hover, h2:hover {
     color: #A020F0;
-    transform: scale(1.1);
-}
-  
-h1 span, h2 span {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation: glitchText 2s infinite linear;
-}
-  
-@keyframes glitchText {
-    0% {
-        transform: skewX(0deg);
-        opacity: 1;
-    }
-    20% {
-        transform: skewX(5deg);
-        opacity: 0.7;
-    }
-    40% {
-        transform: skewX(-5deg);
-        opacity: 0.4;
-    }
-    60% {
-        transform: skewX(3deg);
-        opacity: 0.7;
-    }
-    80% {
-        transform: skewX(-3deg);
-        opacity: 0.4;
-    }
-    100% {
-        transform: skewX(0deg);
-        opacity: 1;
-    }
 }
 
 /* Container Styles */
@@ -115,11 +49,6 @@ h1 span, h2 span {
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
-    transition: transform 0.3s ease;
-}
-
-.about-us:hover {
-    transform: scale(1.05);
 }
 
 .intro {
@@ -148,14 +77,6 @@ h1 span, h2 span {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    overflow: hidden;
-    position: relative;
-}
-
-.member:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .member img {
@@ -164,38 +85,17 @@ h1 span, h2 span {
     border-radius: 50%;
     border: 4px solid #2575fc;
     margin-bottom: 15px;
-    transition: transform 0.1s ease, box-shadow 0.3s ease;
-}
-
-.member img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .member h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #2575fc;
-    transition: color 0.3s ease;
-}
-
-.member h3:hover {
-    color: #A020F0;
 }
 
 .member p {
     font-size: 1.1em;
     color: #777;
-}
-
-/* Hover Effects for Text */
-.member:hover h3 {
-    color: #A020F0;
-}
-
-.member:hover p {
-    color: #fff;
-    font-weight: bold;
 }
 
 /* Mission Section */
@@ -204,35 +104,12 @@ h1 span, h2 span {
     margin-bottom: 50px;
 }
 
-.mission h2 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #2575fc;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
 .mission p {
-    text-align: center;
     font-size: 1.2em;
     color: #555;
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.6;
-    position: relative;
-    display: inline-block;
-    animation: typing 4s steps(40) 1s 1 normal both;
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
-        border-right: 3px solid #2575fc;
-    }
-    100% {
-        width: 100%;
-        border-right: 3px solid transparent;
-    }
 }
 
 /* Contact Button */
@@ -249,94 +126,23 @@ h1 span, h2 span {
     letter-spacing: 1px;
     text-transform: uppercase;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .contact-btn:hover {
     background-color: #1a5bb8;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px) scale(1.1);
 }
 
 /* Footer Section */
 footer {
-    background-color: #222;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    background-color: #333;
+    color: white;
     text-align: center;
-    font-size: 1.1em;
-    color: #fff;
-    border-top: 4px solid #2575fc;
-    animation: footerAnim 3s ease-in-out;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer a {
-    color: #2575fc;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Animation */
-@keyframes footerAnim {
-    0% {
-        transform: translateY(10px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(10px);
-    }
-}
-
-/* Particle Effect Styles */
-@keyframes particleAnimation {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(100px, 100px);
-    }
-}
-
-/* Particle Background Animation */
-.particle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: #ffeb3b;
-    border-radius: 50%;
-    animation: particleAnimation 1.5s infinite ease-in-out;
-}
-
-/* Add a smooth fade-in animation for each section */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-section {
-    animation: fadeIn 1s ease-in-out;
-}
-
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 /* Responsive Styles */
 @media (max-width: 768px) {
     .team-members {
@@ -345,15 +151,28 @@ section {
     }
 
     .member {
-        width: 100%;
-        max-width: 350px;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .intro {
+        font-size: 1.1em;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    .contact-btn {
+        font-size: 1em;
+        padding: 10px 20px;
     }
 }
-
+/* Navigation Styles */
 .top-nav {
     position: fixed;
-    top: 30px;
-    left: 10px;
+    top: 10px;
+    left: 60px;
     display: flex; /* Align items in a row */
     gap: 20px; /* Space between the items */
     z-index: 1000; /* Keeps the navigation on top of all content */
@@ -362,7 +181,7 @@ section {
 .nav-item {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
-    color: brown;
+    color: #130101;
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -370,10 +189,11 @@ section {
 
 .nav-item:hover {
     background-color: #010e01; /* Bright green on hover */
-    color: #ee4511;
+    color: #fcf8f7;
     cursor: pointer;
 }
 
+/* Media Query for Small Screens */
 @media (max-width: 768px) {
     .top-nav {
         flex-direction: column; /* Stack items vertically on small screens */
