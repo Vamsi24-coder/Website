@@ -206,3 +206,40 @@ footer {
         padding: 8px 12px;
     }
 }
+/* General Styles */
+body.dark-mode {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode .container {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode footer {
+    background: #333;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: rgb(247, 242, 242);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #f0f0f0; /* Slightly lighter white */
+    transform: scale(1.1); /* Adds a zoom effect */
+}
+
+.dark-mode-toggle:focus {
+    outline: 2px solid #f0f0f0; /* Adds an outline for focus state */
+    outline-offset: 4px; /* Makes the outline stand out */
+}
+
+/* Main
+
