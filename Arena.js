@@ -66,18 +66,4 @@ function showToast(message) {
 setTimeout(() => {
     showToast('Welcome to Student Arena! Start exploring your learning resources.');
 }, 1000);
-// Get the dark mode toggle button
-const darkModeToggle = document.getElementById('darkModeToggle');
 
-// Add click event listener to the button
-darkModeToggle.addEventListener('click', () => {
-    // Toggle the dark-mode class on the body element
-    document.body.classList.toggle('dark-mode');
-
-    // Get the icon element inside the button
-    const icon = darkModeToggle.querySelector('i');
-
-    // Toggle between moon and sun icons
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
-});
